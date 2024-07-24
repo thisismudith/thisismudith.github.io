@@ -223,7 +223,7 @@ button{
     left: 0;
     display: none;
     grid-template-columns: 100%;
-    grid-template-rows: 25% 0 25% 0 25% 0 25%;
+    grid-template-rows: 20% 0 20% 0 20% 0 20% 0 20%;
     background-color: var(--black);
     height: 100vh;
     width: 100%;
@@ -259,6 +259,13 @@ button{
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+.mobileNav div:last-of-type{
+    flex-direction: row;
+    column-gap: 20px;
+}
+.mobileNav div:last-of-type a{
+    font-size: 20px;
 }
 .mobileNav hr{
     display: block;
