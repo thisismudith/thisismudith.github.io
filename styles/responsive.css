@@ -1,0 +1,177 @@
+@media only screen and (max-width:1300px){
+    .wave, .repos{
+        transform: translateY(-100px);
+    }
+}
+
+@media only screen and (max-width: 900px){
+    #totalP{border-radius: 10px 0 0 0;}
+    #finished{border-radius: 0 10px 0 0;}
+    #under-dev{border-radius: 0 0 0 10px;}
+    #languages{border-radius: 0 0 10px 0;}
+    .contact{
+        margin: 0 90px;
+        margin-left: 150px;
+    }
+    .projects h1{
+        font-size: 48px;
+    }
+    .projects p{
+        max-width: 620px;
+        font-size: 18px;
+    }
+    .wave{
+        transform: translateY(-75px);
+    }
+    .laptop{
+        /* Can change to tablet */
+        transform: translate(-75%, -50%);
+        scale: .8;
+    }
+    #home .daga{
+        width: 192px;
+        height: 439px;
+    }
+}
+
+
+@media only screen and (max-width: 720px){
+    .sidebar{
+        display: none;
+    }
+    .contact{
+        margin: 0 90px;
+        margin-top: 100px;
+    }
+    .wave, .repos{
+        margin-left: 0;
+    }
+    .projects{
+        padding: 30px;
+        padding-top: 80px;
+        height: 300px;
+        background: linear-gradient(360deg, #25573e 0%, #22292c 100%);
+        background-color: #25573e;
+    }
+    .projects h1{
+        font-size: 46px;
+    }
+    .projects p{
+        font-size: 18px;
+    }
+    .wave{
+        width: 100%;
+        transform: translateY(-10px);
+    }
+    .repos{
+        transform: translate(0);
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+    .menu{
+        display: block;
+    }
+    .bottom{
+        left: 20px;
+        bottom: 10px;
+    }
+    .bottom *{
+        font-size: 20px;
+    }
+    #home{
+        /* background: var(--black); */
+        background-size: cover;
+    }
+    .spotify{
+        display: none;
+    }
+    .repo .flex-row{
+        flex-direction: column-reverse;
+    }
+    .tag{
+        display: none;
+    }
+    .contact{
+        margin: 50px;
+    }
+    .contact h1{
+        font-size: 28px;
+    }
+    .contact h4{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .repo, .repos .repo:nth-child(odd){
+        row-gap: 10px;
+        flex-direction: column;
+        padding: 15px;
+        width: 300px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .repo img{
+        width: 250px;
+        height: 250px;
+    }
+    .repo h1{
+        width: 100%;
+        text-align: center;
+    }
+    .repo-content{
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+    }
+    .repo hr{
+        margin: 15px 0;
+    }
+    .repo .flex-row{
+        flex-direction: column-reverse;
+    }
+    .repo ul{
+        width: 100%;
+    }
+    .contact{
+        margin: 50px 25px;
+    }
+    .contact h1{
+        font-size: 24px;
+    }
+    .contact h4{
+        font-size: 12px;
+    }
+    .contact .info .cTitle, .contact .info .cText{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .repos .stats, .repos .stats div{
+        gap: 5px;
+    }
+    .repos .stats .stat{
+        padding: 10px;
+        width: 140px;
+    }
+    .repos .stats .stat #num{
+        font-size: 16px;
+    }
+    .repos .stats .stat #text{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 386px){
+    .repos .stats, .repos .stats p, .repos .stats h3{
+        transform: skew(0);
+    }
+    #totalP{border-radius: 10px 10px 0 0;}
+    #finished{border-radius: 0 0 0 0;}
+    #under-dev{border-radius: 0 0 0 0;}
+    #languages{border-radius: 0 0 10px 10px;}
+}

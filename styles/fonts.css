@@ -1,0 +1,13 @@
+/* Sans */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@font-face{font-family:"Sans";font-weight:400;src:url("../assets/fonts/sans/SourceSansPro-Regular.ttf")  format("truetype");}
+@font-face{font-family:"Sans";font-weight:400;src:url("../assets/fonts/sans/SourceSansPro-Bold.ttf")  format("truetype");}
+.san{font-family:"Sans",sans-serif;font-weight: 400;}
+.sanb{font-family:"Sans",sans-serif;font-weight: 800;}
+
+/* Consolas */
+@font-face{font-family:"Consolas";font-weight:400;src:url("../assets/fonts/consolas/consolas.ttf")  format("truetype");}
+@font-face{font-family:"Consolas";font-weight:400;src:url("../assets/fonts/consolas/consolas.ttf")  format("truetype");}
+.con{font-family:"Consolas",monospace;font-weight: 400;}
+.conb{font-family:"Consolas",monospace;font-weight: 800;}

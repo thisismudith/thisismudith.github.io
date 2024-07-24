@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/72611306?v=4" type="image/x-icon">
+    <title>thisismudith</title>
+</head>
+<body onload="onLoad()">
+    <div class="spotify">
+        <div class="three-dots">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="https://avatars.githubusercontent.com/u/72611306?v=4" alt="thisismudith">
+        </div>
+        <div class="sidelink">
+            <div class="slider"></div>
+            <a href="#home" onclick="sidebarScroll(0, true)" id="sidelink-0">Home</a>
+            <a href="#projects" onclick="sidebarScroll(1, true)" id="sidelink-1">Projects</a>
+            <a href="#fun" onclick="sidebarScroll(2, true)" id="sidelink-3">Hobbies</a>
+            <a href="#contact" onclick="sidebarScroll(3, true)" id="sidelink-2">Contact</a>
+        </div>
+        <div class="social">
+            <a class="noHover" href="https://twitter.com/thisismudith/"><i class="fa-brands fa-twitter"></i></a>
+            <a class="noHover" href="https://instagram.com/thisismudith" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a class="noHover" href="https://discordapp.com/users/721612988200648724" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        </div>
+    </div>
+    <div id="home">
+      <div class="menu">
+        <div class="burger" onclick="toggleMenu(this)">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="mobileNav">
+        <div><a href="#home" onclick="mobileSidebar(this); toggleMenu(document.querySelector('.burger'))">Home</a></div>
+        <hr>
+        <div><a href="#projects" onclick="mobileSidebar(this); toggleMenu(document.querySelector('.burger'))">Projects</a></div>
+        <hr>
+        <div><a href="#fun" onclick="mobileSidebar(this); toggleMenu(document.querySelector('.burger'))">Hobbies</a></div>
+        <hr>
+        <div><a href="#contact" onclick="mobileSidebar(this); toggleMenu(document.querySelector('.burger'))">Contact</a></div>
+      </div>
+      <div class="mobile">
+        <div class="mb-logo">
+          <img src="https://avatars.githubusercontent.com/u/72611306?v=4" alt="thisismudith">
+        </div>
+        <div class="mobile-img">
+          <div class="mb-daga">
+          </div>
+        </div>
+        <div class="mobile-content">
+          <div class="mb-top">
+            <h2>Hello I am</h2>
+            <h1 class="sanb">Mudith Daga</h1>
+            <h5>Web & Software Developer</h5>
+            <button onclick="">Hire Me</button>
+          </div>
+          <div class="mb-btm">
+              <div class="line"></div>
+              <a href="https://twitter.com/thisismudith/"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://instagram.com/thisismudith" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://discordapp.com/users/721612988200648724" target="_blank"><i class="fa-brands fa-discord"></i></a>
+              <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="desktop">
+        <div class="hidden" exec="sidebarScroll(0)"></div>
+        <div class="daga">
+        </div>
+        <div class="laptop">
+            <div class="border"></div>
+            <div class="monitor">
+                <div class="screen unselectable">
+                    <div class="vsnav"></div>
+                    <div class="vsside"></div>
+                    <div class="vspage"></div>
+                    <span class="cursor"></span>
+                    <div class="mouse"></div>
+                    <p class="padding">&lt;body&gt;</p>
+                    <br>
+                    <p>&lt;h1&gt;</p>
+                    <h1></h1>
+                    <p>&lt;/h1&gt;</p>
+                    <br>
+                    <p>&lt;h3&gt;</p>
+                    <h3 class="con"></h3>
+                    <p>&lt;/h3&gt;</p>
+                    <br>
+                    <p>&lt;p&gt;</p>
+                    <h4 class="con" id="visits">We got <span id="unique">1</span> unique and <span id="total">1</span> total <span id="visitTense">visits</span>.</h4>
+                    <p>&lt;/p&gt;</p>
+                    <br>
+                    <p class="padding">&lt;/body&gt;</p>
+                </div>
+            </div>
+            <div class="base"></div>
+        </div>
+        <div class="bottom" onmouseover="this.querySelector('i').className = 'fa-duotone fa-angles-down'" onmouseout="this.querySelector('i').className = 'fa-solid fa-angle-down'" onclick="window.location.href = '#projects'">
+            <h2 class="con">View Projects</h2>
+            <br>
+            <i class="fa-solid fa-angle-down" animation="downArrowMove .5s 7.6s forwards"></i>
+        </div>
+      </div>
+    </div>
+    <div class="big-projects">
+      <div class="projects" id="projects">
+        <h1>My Projects</h1>
+        <p><span exec="sidebarScroll(1)">Now that you've scrolled so far, let's jump into it.</span> Over the years, I've explored various different programming languages and data techniques to develop my skill set. I used these skill sets to develop a few projects:</p></p>
+      </div>
+    <svg class="wave" width="100%" height="100%" id="svg" viewBox="0 0 1440 270" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
+        .path-0{
+          animation:pathAnim-0 4s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+        @keyframes pathAnim-0{
+          0%{
+            d: path("M 0,400 C 0,400 0,200 0,200 C 84.78571428571428,170.96428571428572 169.57142857142856,141.92857142857142 309,147 C 448.42857142857144,152.07142857142858 642.4999999999999,191.25 762,200 C 881.5000000000001,208.75 926.4285714285713,187.07142857142856 1027,182 C 1127.5714285714287,176.92857142857144 1283.7857142857142,188.46428571428572 1440,200 C 1440,200 1440,400 1440,400 Z");
+          }
+          25%{
+            d: path("M 0,400 C 0,400 0,200 0,200 C 113.21428571428572,188.78571428571428 226.42857142857144,177.57142857142858 350,177 C 473.57142857142856,176.42857142857142 607.5,186.49999999999997 723,191 C 838.5,195.50000000000003 935.5714285714284,194.42857142857144 1052,195 C 1168.4285714285716,195.57142857142856 1304.2142857142858,197.78571428571428 1440,200 C 1440,200 1440,400 1440,400 Z");
+          }
+          50%{
+            d: path("M 0,400 C 0,400 0,200 0,200 C 140.64285714285717,166.53571428571428 281.28571428571433,133.07142857142858 409,147 C 536.7142857142857,160.92857142857142 651.4999999999999,222.24999999999994 745,247 C 838.5000000000001,271.75000000000006 910.7142857142858,259.92857142857144 1023,246 C 1135.2857142857142,232.07142857142856 1287.642857142857,216.03571428571428 1440,200 C 1440,200 1440,400 1440,400 Z");
+          }
+          75%{
+            d: path("M 0,400 C 0,400 0,200 0,200 C 146.28571428571428,163.67857142857144 292.57142857142856,127.35714285714286 411,133 C 529.4285714285714,138.64285714285714 620,186.25 717,206 C 814,225.75 917.4285714285713,217.64285714285717 1039,212 C 1160.5714285714287,206.35714285714283 1300.2857142857142,203.17857142857142 1440,200 C 1440,200 1440,400 1440,400 Z");
+          }
+          100%{
+            d: path("M 0,400 C 0,400 0,200 0,200 C 84.78571428571428,170.96428571428572 169.57142857142856,141.92857142857142 309,147 C 448.42857142857144,152.07142857142858 642.4999999999999,191.25 762,200 C 881.5000000000001,208.75 926.4285714285713,187.07142857142856 1027,182 C 1127.5714285714287,176.92857142857144 1283.7857142857142,188.46428571428572 1440,200 C 1440,200 1440,400 1440,400 Z");
+          }
+        }
+    </style><defs><linearGradient id="gradient" x1="50%" y1="100%" x2="50%" y2="0%"><stop offset="10%" stop-color="#22272B"></stop><stop offset="90%" stop-color="#25573e"></stop></linearGradient></defs><path d="M 0,400 C 0,400 0,200 0,200 C 84.78571428571428,170.96428571428572 169.57142857142856,141.92857142857142 309,147 C 448.42857142857144,152.07142857142858 642.4999999999999,191.25 762,200 C 881.5000000000001,208.75 926.4285714285713,187.07142857142856 1027,182 C 1127.5714285714287,176.92857142857144 1283.7857142857142,188.46428571428572 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path></svg>
+    <div class="repos" exec="sidebarScroll(1)">
+      <div class="stats">
+        <div>
+          <div class="stat" id="totalP">
+            <p><span id="num">-</span><br><span id="text">Total Projects</span></p>
+          </div>
+          <div class="stat" id="finished">
+            <p><span id="num">-</span><br><span id="text">Finished Projects</span></p>
+          </div>
+        </div>
+        <div>
+          <div class="stat" id="under-dev">
+            <p><span id="num">-</span><br><span id="text">Ongoing Projects</span></p>
+          </div>
+          <div class="stat" id="languages">
+            <p><span id="num">-</span><br><span id="text">Unique Languages</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="sync">
+        <p>Loading...</p>
+        <button onclick="syncRepos()" data-tooltip="Projects automatically sync once every 3 hours. Click the button to sync now." data-tooltip-center><i class="fa-solid fa-rotate-right"></i> Sync now</button>
+      </div>
+      <div class="load-bottom">
+        <div class="loading"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <button class="loadMore" onclick="loadRepos(true)">Load More</button>
+        <div id="slow-loading">
+          <p>Have a slow internet? Check out my GitHub Page: <a href="https://github.com/thisismudith">@thisismudith</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact" id="contact" exec="sidebarScroll(2);">
+    <div>
+      <h1>There's no way you missed this.</h1>
+      <h4>Want to hire me? No worries, I've got you covered.</h4>
+    </div>
+    <ul class="info">
+      <li>
+        <span class="cTitle">Name:&nbsp;</span>
+        <span class="cText">Mudith Daga</span>
+      </li>
+      <li>
+        <span class="cTitle">Age:&nbsp;</span>
+        <span class="cText" id="age">15 years</span>
+      </li>
+      <li>
+        <span class="cTitle">Email:&nbsp;</span>
+        <span class="cText"><a href="mailto:dagamudith@gmail.com" target="_blank"><span>dagamudith@gmail.com</span></a></span></li>
+      <li>
+        <span class="cTitle">GitHub:&nbsp;</span> 
+        <span class="cText"><a href="https://github.com/thisismudith" target="_blank"><span>thisismudith</span></a></span>
+        <li>
+          <span class="cTitle">Languages:&nbsp;&nbsp;</span>
+          <span class="cText">
+            <div class="langLabel" animation="zoomIn .8s forwards"><img src="assets/images/langs/html.svg" alt="HTML5"></div>
+            <div class="langLabel" animation="zoomIn .8s .2s forwards"><img src="assets/images/langs/css.svg" alt="CSS3"></div>
+            <div class="langLabel" animation="zoomIn .8s .4s forwards"><img src="assets/images/langs/javascript.svg" alt="JavaScript"></div>
+            <div class="langLabel" animation="zoomIn .8s .6s forwards"><img src="assets/images/langs/jquery.svg" alt="JQuery"></div>
+            <div class="langLabel" animation="zoomIn .8s .8s forwards"><img src="assets/images/langs/python.svg" alt="Python"></div>
+            <div class="langLabel" animation="zoomIn .8s 1s forwards"><img src="assets/images/langs/json.svg" alt="JSON"></div>
+            <div class="langLabel" animation="zoomIn .8s 1.2s forwards"><img src="assets/images/langs/numpy.svg" alt="Numpy"></div>
+            <div class="langLabel" animation="zoomIn .8s 1.4s forwards"><img src="assets/images/langs/pandas.svg" alt="Pandas"></div>
+            <div class="langLabel" animation="zoomIn .8s 1.6s forwards"><img src="assets/images/langs/git.svg" alt="Git"></div>
+            <div class="langLabel" animation="zoomIn .8s 1.8s forwards"><img src="assets/images/langs/mongo-db.svg" alt="MongoDB"></div>
+            <div class="langLabel" animation="zoomIn .8s 2s forwards"><img src="assets/images/langs/cmd.svg" alt="Windows Terminal"></div>
+            <div class="langLabel" animation="zoomIn .8s 2.2s forwards"><img src="assets/images/langs/kali.svg" alt="Kali Linux"></div>
+          </span>
+        </li>
+        <li>
+          <span class="cTitle">
+            <i class="fa-solid fa-location-dot"></i> 
+            Location:
+          </span>
+          <span class="cText">India</span></li>
+          <li>
+            <span class="cTitle">Work Preference:</span>
+            <span class="cText">Remotely, Virtual, and Full Time</span></li>
+            <li>
+              <span class="cTitle">Programming Category:</span>
+              <span class="cText">Full Stack Developer</span></li>
+            </li>
+        <li>
+          <span class="cTitle">Other Links:&nbsp;</span> 
+          <span class="cText">
+            <a href="" target="_blank"><span>Resume</span> <i class="fa-solid fa-up-right-from-square"></i></a> |
+            <a href="https://www.worldcubeassociation.org/persons/2018DAGA01" target="_blank"><span>World Cube Association</span> <i class="fa-solid fa-up-right-from-square"></i></a> |
+            <a href="https://youtu.be/OzZrb_BL9hQ" target="_blank"><span>TEDx</span> <i class="fa-solid fa-up-right-from-square"></i></a>
+          </span>
+        </li>
+      </ul>
+  </div>
+  <div class="box"></div>
+  <div class="resume" animation="resumePopUp 0.5s forwards">
+    <i class="fa-solid fa-file-pdf"></i></i>
+    <span>Oh so you're already down here? Here, <a href="" download="Resume - Mudith Daga">my resume</a> might come in handy!</span>
+      <!-- <i class="fa-solid fa-up-right-from-square"></i> -->
+  </div>
+    <!-- Animation Part -->
+    <div class="spider">
+        <div class="spiderweb"></div>
+        <div class="body">
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+        </div>
+        <div class="legs left">
+          <div class="leg"></div>
+          <div class="leg"></div>
+          <div class="leg"></div>
+        </div>
+        <div class="legs right">
+          <div class="leg"></div>
+          <div class="leg"></div>
+          <div class="leg"></div>
+        </div>
+        <div class="blood">
+          <div stainAnim="stain .2s forwards"></div>
+          <div stainAnim="stain .1s .1s forwards"></div>
+          <div stainAnim="stain .3s .2s forwards"></div>
+          <div stainAnim="stain .2s .2s forwards"></div>
+          <div stainAnim="stain .2s .1s forwards"></div>
+        </div>
+      </div>
+      <!-- <footer class="footer">
+        <div class="fWaves">
+          <div class="fWave" id="wave1"></div>
+          <div class="fWave" id="wave2"></div>
+          <div class="fWave" id="wave3"></div>
+          <div class="fWave" id="wave4"></div>
+        </div>
+        <p id="copyright">&copy;2023 <a href="https://github.com/thisismudith/" target="_blank">@thisismudith</a> | All Rights Reserved</p>
+      </footer> -->
+      <!-- <button id="togglePlay" style="position: absolute; top: 100px; left: 500px;">Play</button> -->
+    <script src="scripts/main.js" type="text/javascript"></script>
+    <script src="scripts/onScroll.js" type="text/javascript"></script>
+    <script src="scripts/spotify.js" type="text/javascript"></script>
+    <script src="scripts/git.js" type="text/javascript"></script>
+    <!-- <script src="https://sdk.scdn.co/spotify-player.js"></script> -->
+</body>
+</html>
