@@ -343,7 +343,7 @@ function sourceChecked(originalCall=true){
             '<i class="fa-solid fa-code"></i>',
             `
             Loved the website? Check out the source code on GitHub &nbsp;&nbsp;
-            <a href="https://github.com/thisismudith/thisismudith" target="_blank" onclick="set('sourceChecked', true)">
+            <a href="https://github.com/thisismudith/thisismudith.github.io" target="_blank" onclick="set('sourceChecked', true)">
                 <i class="fa-solid fa-up-right-from-square"></i>
             </a>
             `, 
