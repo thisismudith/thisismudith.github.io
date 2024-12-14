@@ -10,13 +10,10 @@ async function onLoad(){
             "syncRepos": [],
             "sourceChecked": false,
         }));
-        console.log('UNDONE!')
-        syncRepos();
     }
     if (window.innerWidth <= 720){
         document.querySelector('#gradient stop').setAttribute('stop-color', '#25573e')
     }
-    console.log('DONE!')
     document.getElementById("unique").textContent = get("cache")["unique"];
     document.getElementById("total").textContent = get("cache")["total"];
     if (get("cache")["total"] != 1) document.getElementById("visitTense").textContent = "visitors";
@@ -62,7 +59,6 @@ async function getViews(){
         method: "GET",
     }
     ).then(response => response.json())
-    console.log(views)
     let unique = views["unique"],
     total = views["total"]
     if (get("visited")) total++
@@ -319,7 +315,6 @@ function notification(icon, content, bg="var(--black)", fg="white", time=5000, o
         notif = true;
         notificationContainer.appendChild(notifMsg);
     }
-    console.log(originalCall, notif)
 };
 
 var stationary = true
@@ -394,3 +389,17 @@ document.body.addEventListener("wheel", (e) => {
     var scrolled = (home.style.backgroundPositionX) ? parseInt(home.style.backgroundPositionX.replace('px', ''))/100 : 0;
     home.style.backgroundPositionX = -(scrolled + document.documentElement.scrollTop) + "px";
 });
+
+// Misc
+
+async function checkImage(url) {
+    var image = new Image();
+    return await new Promise(
+        (resolve, reject) => {
+            image.onload = function() {
+                if (this.width > 0) resolve(true);
+                else return false;
+            }
+        }
+    );
+}

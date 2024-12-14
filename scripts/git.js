@@ -1,7 +1,6 @@
 var star, 
 loadedRepos = 0, 
 repos = [],
-// appendRepos = [],
 ids = [],
 reviewed = 0,
 stats = {
@@ -42,13 +41,6 @@ async function requestUserRepos(){ // Load only 5 at once, if clicked load more,
             star = Object.keys(stargazers).reduce((a, b) => stargazers[a] > stargazers[b] ? a : b)
             set('syncTime', new Date().getTime())
         }else{
-            // data = WHOA // TO be deleted
-            // stats.max = data.length // TO be deleted
-            // for (let i in data){ // TO be deleted
-            //     exists = loadRepo(user, data[i]) // TO be deleted
-            //     stargazers[data[i].name] =  data[i].stargazers_count // TO be deleted
-            // } // TO be deleted
-            // star = Object.keys(stargazers).reduce((a, b) => stargazers[a] > stargazers[b] ? a : b) // TO be deleted
             notification('<i class="fa-regular fa-circle-xmark"></i>', 'We are being rate limited by the GitHub API. Please try again later.', 'var(--red)', "white", 5000)
             document.querySelector('.loading').style.display = 'none';
         }
@@ -56,50 +48,41 @@ async function requestUserRepos(){ // Load only 5 at once, if clicked load more,
 }
 
 async function loadRepo(user, data){
-    // var languages = await fetch(data.languages_url, {
-    //     headers: {
-    //         Authorization: "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yX3PYF7YQZIzMzguH2l"
-    //     }
-    // }).then(res => {
-    //     return (res.ok) ? res.json() : {}
-    // }).then(data => Object.keys(data))
     await fetch(`https://raw.githubusercontent.com/${user}/${data.name}/main/web-preview/manifest.json`).then(res => {
         var id = repos.map(repo => repo.id)
         reviewed ++;
         if (!id.includes(data.id)){
             if (res.ok){
-                stats.total ++;
                 description = res.json().then(manifest => {
-                    console.log(manifest)
                     if (manifest.status) stats.finished += 1
                     else stats.under_dev += 1
-                    repos.push({
-                        "name": data.name, 
-                        "id": data.id,
-                        "description": manifest.description,
-                        "languages": manifest.languages,
-                        "url": data.html_url,
-                        "image": (manifest.hasOwnProperty("image")) ? manifest.image : "assets/images/default.png",
-                        "time": data.updated_at,
-                        'link': manifest.link,
-                        'href': manifest.href,
-                        'status': manifest.status   
-                    })
-                    console.log(repos)
-                    for (let lang of ["HTML", "CSS", "JS", "JS Framework"]){
+                    res = {
+                      "name": data.name, 
+                      "id": data.id,
+                      "description": manifest.description,
+                      "languages": manifest.languages,
+                      "url": data.html_url,
+                      "image": (manifest.hasOwnProperty("image")) ? ((manifest.image) ? manifest.image: "assets/images/default.png") : "assets/images/default.png",
+                      "time": data.updated_at,
+                      'link': manifest.link,
+                      'href': manifest.href,
+                      'status': manifest.status   
+                    }
+                    if (!repos.includes(res)){
+                      repos.push(res)
+                      stats.total ++;
+                    }
+                    for (let lang of manifest.languages){
                         if (!stats.languages.includes(lang)) stats.languages.push(lang)
                     }
                 })
             }
         }
     })
-    if (reviewed == stats.max) sortRepos()
-    // if (repos.length + 1 == stats.total) requestUserRepos()
+    if (reviewed == stats.max) sortRepos();
 }
 
 function sortRepos(ascending=true){
-    repos = [...new Set(repos)]
-    console.log(repos)
     repos = repos.sort((a, b) => (ascending) ? (b.time - a.time):(a.time - b.time))
     repos.map(repo => {
         if (ids.includes(repo.id)) repos.splice(repos.indexOf(repo), 1)
@@ -132,7 +115,6 @@ async function loadRepos(load=false){
         }
     }
     var res = repos.slice(0, 5)
-    console.log(res)
     var appendRepos = []
     setTimeout(()=>{
         res.forEach(repo => {
@@ -200,11 +182,9 @@ async function syncRepos(forceContinue=false){
             if (get('syncRepos').length == 0){
                 document.getElementById('slow-loading').style.display = 'block';
                 document.querySelector('.loadMore').style.display = 'none';
-                // set('syncTime', 0)
             }else if (!document.querySelector('.repo')){
                 document.getElementById('slow-loading').style.display = 'block';
                 document.querySelector('.loadMore').style.display = 'none';
-                // set('syncTime', 0)
             }
         }, 1000)
         document.querySelector('.loadMore').style.display = 'none';
