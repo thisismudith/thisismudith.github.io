@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudith Daga - Resume</title>
+    <!-- Use Tailwind CSS for a modern, responsive layout -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #374151;
+        }
+        .container {
+            max-width: 8.5in; /* Standard letter size width */
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            min-height: 11in; /* Standard letter size height */
+            padding: 2.5rem;
+        }
+        .mb-4:first-of-type{
+            margin-top: 0.5rem;
+        }
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+        h1 {
+            color: #1f2937;
+            font-size: 2.5rem;
+            margin-bottom: 0.25rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #1f2937;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            font-size: 1.125rem;
+            color: #1f2937;
+            margin-top: 1rem;
+        }
+        p, ul {
+            font-size: 1rem;
+            color: #4b5563;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.25rem;
+        }
+        .dates {
+            font-weight: 500;
+            color: #6b7280;
+        }
+        .project-link {
+            text-decoration: none;
+            color: #0084ff; /* Updated link color */
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .project-link:hover {
+            color: #0084ff; /* Keep same color on hover */
+            text-decoration: underline; /* Add underline on hover */
+        }
+        .contact-info a {
+            color: #0084ff; /* Updated contact link color */
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-info a:hover {
+            color: #0084ff; /* Keep same color on hover */
+            text-decoration: underline; /* Add underline on hover */
+        }
+        /* Custom style for hollow circle sub-list */
+        .list-circle {
+            list-style-type: circle;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container rounded-lg shadow-xl p-8 md:p-12 my-8">
+
+        <!-- Header Section -->
+        <header class="text-center pb-4 border-b-2 border-gray-200 mb-6">
+            <h1 class="font-bold">Mudith Daga</h1>
+            <div class="contact-info text-gray-600 text-sm md:text-base mt-2 space-y-1">
+                <p>Surat, Gujarat - India | dagamudith@gmail.com | <a href="https://thisismudith.github.io/" target="_blank" class="hover:underline">Profile Website</a> | <a href="https://github.com/thisismudith" target="_blank" class="hover:underline">GitHub</a> | <a href="https://linkedin.com/in/thisismudith" target="_blank" class="hover:underline">LinkedIn</a></p>
+            </div>
+        </header>
+
+        <!-- Education Section -->
+        <section>
+            <h2>Education</h2>
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">Plaksha University</h3>
+                    <p class="dates">August 2025 - Present</p>
+                </div>
+                <p class="text-gray-700">Bachelor of Technology in Computer Science and Artificial Intelligence (Ongoing)</p>
+            </div>
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">Fountainhead School</h3>
+                    <p class="dates">July 2018 - May 2025</p>
+                </div>
+                <p class="text-gray-700">IB Diploma Program</p>
+                <ul class="list-disc ml-6 mt-2 text-sm">
+                    <li><strong>IB Diploma (Grade 12):</strong> 40/45
+                        <ul class="list-circle ml-6 mt-1 text-sm">
+                            <li><strong>Mathematics Analysis and Approaches at Higher Level:</strong> 7</li>
+                            <li><strong>Physics at Higher Level:</strong> 6</li>
+                            <li><strong>Chemistry at Higher Level:</strong> 6</li>
+                            <li><strong>Economics at Higher Level:</strong> 6</li>
+                            <li><strong>English A at Standard Level:</strong> 6</li>
+                            <li><strong>Hindi B at Standard Level:</strong> 6</li>
+                            <li><strong>Core Components:</strong> 3/3 with an 'A' in Theory of Knowledge and a 'B' in the Computer Science Extended Essay.</li>
+                        </ul>
+                    </li>
+                    <li><strong>IB MYP E-Assessment (Grade 10)</strong>: 53/56</li>
+                </ul>
+                <br>
+                <p class="text-gray-700">BTEC IT Pearson Course Subsidiary Diploma</p>
+                <p class="text-gray-700 text-sm italic mt-1">Earned a Distinction in Unit 1 - Information Technology Systems, awaiting final results.</p>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section>
+            <h2>Achievements</h2>
+            <div class="mb-4">
+                <ul class="list-disc ml-6 space-y-1">
+                    <li>Recipient of the Lakshya Scholarship for outstanding academics and extracurriculars.</li>
+                    <li>Ranked 2nd in school and 204th nationally in AMC 12A (2023-24).</li>
+                    <li>Distinction in the Canadian Computing Contest, February 2024.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section>
+            <h2>Certifications</h2>
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">Pristine Info Solutions</h3>
+                    <p class="dates">2022-2023</p>
+                </div>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li><strong>Certified Information Security and Ethical Hacker (v4) Course:</strong> Completed 50 hours of training in cybersecurity, ethical hacking, and vulnerability assessment.</li>
+                    <li><strong>Certified Penetration Testing Engineer Course:</strong> Completed 100 hours of advanced penetration testing, mastering topics like SQL injections, attack simulation, and threat analysis.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section>
+            <h2>Experience</h2>
+            <!-- Luneblaze -->
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">Luneblaze</h3>
+                    <p class="dates">November 2023</p>
+                </div>
+                <p class="text-gray-700 font-medium">Data Analytics Internship</p>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Led projects focused on analyzing datasets from Facebook and Apple, deriving meaningful patterns and trends.</li>
+                    <li>Used descriptive, diagnostic, predictive, and prescriptive analytics to craft actionable recommendations.</li>
+                    <li>Developed an automated pipeline for data cleaning and preprocessing, improving efficiency by 30%.</li>
+                    <li><strong>Key Learning:</strong> Gained experience in real-world data handling, enhancing proficiency in Python and data visualization.</li>
+                </ul>
+            </div>
+
+            <!-- The Hemp House -->
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">The Hemp House</h3>
+                    <p class="dates">January 2023 - April 2023</p>
+                </div>
+                <p class="text-gray-700 font-medium">Senior IT Intern</p>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Designed a user-friendly e-commerce website from scratch, integrating advanced tools for sales and marketing automation.</li>
+                    <li>Conducted in-depth research on digital marketing strategies, including leveraging social media for customer engagement.</li>
+                    <li>Contributed to strategic growth discussions by presenting IT-driven solutions for operational challenges.</li>
+                    <li><strong>Key Impact:</strong> Helped the start-up transition to an online platform, resulting in increased market visibility and sales.</li>
+                </ul>
+            </div>
+
+            <!-- Atishae -->
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">Atishae</h3>
+                    <p class="dates">July - September 2022</p>
+                </div>
+                <p class="text-gray-700 font-medium">Web Development Internship</p>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Collaborated on multiple client-facing web projects, ensuring optimized performance and security compliance.</li>
+                    <li>Applied modern web technologies to enhance user interfaces, boosting client satisfaction.</li>
+                    <li><strong>Key Learning:</strong> Strengthened coding best practices and developed an understanding of client-centric solutions.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Leadership and Activities (Projects) Section -->
+        <section>
+            <h2>Leadership and Activities</h2>
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">Drafting a Research Paper</h3>
+                    <p class="dates">Present</p>
+                </div>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Working on the development of an algorithm that yields the shortest path with n-weighted nodes, considering negative nodes as well.</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">NextStep HACKS 2024</h3>
+                    <p class="dates">August 2024</p>
+                </div>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Ranked Top 4 out of 408 participants.</li>
+                    <li>Developed "My Market," a web application to connect small food businesses with customers.
+                        <a href="https://nextstep2024.devpost.com" target="_blank" class="project-link">Hackathon Link</a> |
+                        <a href="https://devpost.com/software/mymarket-ozd485" target="_blank" class="project-link">Project Link</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">First Tech Challenge 2024 - Nationals and Asia Pacific Open Championship (APOC)</h3>
+                    <p class="dates">September 2023 - July 2024</p>
+                </div>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Vice Captain, Lead Programmer and Main Driver of Team 20914 Lab Fusion; won the Control Award (nationals) and Innovate Award Finalists (APOC).</li>
+                    <li>Spent 11 months in constructing and programming the robot and learned the OnShape CAD software.</li>
+                    <li>Organized robotic workshops and created free CAD and Canva courses for underprivileged schools with over 2500+ students and raised more than 4 Lakh INR for social STEM causes including robotics lab setups in governmental schools for free.</li>
+                    <li>Spent numerous hours in the next edition of our podcast as the team's audio editor. <a href="https://open.spotify.com/show/1XxOXaTKPmgzmZLETtamv6?si=a52dcb2ac8444585" target="_blank" class="project-link">Podcast Link - But FIRST, STEM</a>.</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">TEDx Speaker</h3>
+                    <p class="dates">February 2024</p>
+                </div>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Selected as a TEDx speaker under TEDx Fountainhead School Youth, delivering a talk titled "Beyond Pollyanna: Embracing Growth in Positivity & Realism."
+                        <a href="https://youtu.be/OzZrb_BL9hQ" target="_blank" class="project-link">Talk Link</a>.
+                    </li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">Reply Cybersecurity Challenge CTF</h3>
+                    <p class="dates">October 2023</p>
+                </div>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Ranked 356 out of 3085 coding teams (Top 11.5%) in a 24 hour challenge.</li>
+                    <li>Solved challenges in coding, web, binary, crypto, and miscellaneous problems—including exploitation.</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">Reply Code Challenge 2024 - Teen Edition</h3>
+                    <p class="dates">October 2023</p>
+                </div>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Ranked 169 out of 732 coding teams (Top 23.1%).</li>
+                    <li>Completed 5 different competitive programming challenges with runtime constraints.</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">Python Code Jam</h3>
+                    <p class="dates">September 2023</p>
+                </div>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Secured Top 10 position for a project utilizing steganography and a custom encryption method named <strong>"Typing Colors"</strong>.
+                        <a href="https://github.com/inkontoasty/the-neverending-loops" target="_blank" class="project-link">Project Link</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">Model United Nations (MUNs)</h3>
+                </div>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Chaired an IIMUN Committee, leading discussions with over 40 delegates.</li>
+                    <li>Participated in 5 MUNs, earning Best Delegate awards in four conferences and High Commendation in one.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Volunteer Work -->
+        <section>
+            <h2>Volunteer Work</h2>
+            <div class="mb-4">
+                <div class="section-header">
+                    <h3 class="font-semibold">Surat, India</h3>
+                    <p class="dates">2020 - Present</p>
+                </div>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Taught IT skills and basics of computers, cricket, and life morals to about 150 students.</li>
+                    <li>Conducted robotics and IT workshops for over 4,000 students in schools and NGOs.</li>
+                    <li>Empowered underprivileged students with essential skills, creating a lasting community impact.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills & Interests -->
+        <section>
+            <h2>Skills & Interests</h2>
+            <div class="mb-4">
+                <h3 class="font-semibold">Skills</h3>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li><strong>Languages & Technologies:</strong> Expertise in HTML, CSS, JavaScript; High proficiency in Python, Microsoft Word, and Microsoft Excel; Basic proficiency in web servers.</li>
+                    <li><strong>Major Projects:</strong> Number system based on permutations, JavaScript Library for UI enhancement, custom encryption system, automated data analysis and interpretation for xlsx files.</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <h3 class="font-semibold">Other Interests</h3>
+                <ul class="list-disc ml-6 mt-1 text-sm">
+                    <li>Debating, political philosophies, economics, music, badminton and cricket.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
